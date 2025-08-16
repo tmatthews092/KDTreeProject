@@ -103,9 +103,10 @@ This will run:
 - All methods with **2D points**  
 - `getNode` and `insert` with **3D points**  
 
-### Option 2: Run Interactive Application
-- Open project in **VS Code with Jupyter integration**.  
-- Choose tree dimensionality (**2D or 3D**).  
+### Option 2: Run Application
+- In VSCode Juypter Ctrl + Shift + D
+- F5 or click Run App in Run and Debug Tab
+- Choose tree dimensionality (**2D or 3D**).
 - Use the console menu:
 [1] Get Node
 [2] Insert

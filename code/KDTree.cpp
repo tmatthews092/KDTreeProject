@@ -255,7 +255,18 @@ void KDTree::printPoint(Node* node) {
         }
     }
 }
-
+/**
+ * @brief Recursively prints the KDTree in a structured tree format.
+ * 
+ * This method outputs the tree structure to the console as branches. 
+ * Each node is displayed with its point, and child nodes are printed 
+ * recursively with indentation to indicate tree hierarchy.
+ * 
+ * @param node poin to the current Node to print. If nullptr, nothing is printed.
+ * @param prefix String used for indentation and branch lines (default is empty).
+ * @param isLeft Boolean flag indicating whether the current node is a left child 
+ *               (true) or right child (false) of its parent; used for branch symbols.
+ */
 void KDTree::printKDTree(Node *node, string prefix = "", bool isLeft = true) {
     if (!node) {
         return;

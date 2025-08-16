@@ -108,7 +108,7 @@ This will run:
 - In VSCode Juypter Ctrl + Shift + D
 - F5 or click Run App in Run and Debug Tab
 - Choose tree dimensionality (**2D or 3D**).
-- Use the console menu:
+- Use the console menu:<br>
 [1] Get Node <br>
 [2] Insert <br>
 [3] Find Min From Node (Given Axis) <br>

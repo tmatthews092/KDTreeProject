@@ -107,6 +107,20 @@ public:
      * @return Node* minimum node for a given dimension
      */ 
     Node *findMinimumAxisValueFromNode(Node *node, unsigned int axis);
+
+    /**
+     * @brief Recursively prints the KDTree in a structured tree format.
+     * 
+     * This method outputs the tree structure to the console as branches. 
+     * Each node is displayed with its point, and child nodes are printed 
+     * recursively with indentation to indicate tree hierarchy. The left branch
+     * is represented as ├── and right branch is represented as └──. 
+     * 
+     * @param node (Node*) node to print from. If nullptr, nothing is printed.
+     * @param prefix (string) used for indentation and branch lines (default is empty).
+     * @param isLeft (bool) flag indicating whether the current node is a left child (true) 
+     * or right child (false) of its parent; used for branch symbols.
+     */
     void printKDTree(Node *node, string prefix, bool isLeft);
 
 private:

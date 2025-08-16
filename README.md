@@ -109,11 +109,11 @@ This will run:
 - F5 or click Run App in Run and Debug Tab
 - Choose tree dimensionality (**2D or 3D**).
 - Use the console menu:
-[1] Get Node
-[2] Insert
-[3] Find Min From Node (Given Axis)
-[4] Remove
-[5] Find Nearest Neighbor
-[6] Range Search
-[7] Print Tree
+[1] Get Node <br>
+[2] Insert <br>
+[3] Find Min From Node (Given Axis) <br>
+[4] Remove <br>
+[5] Find Nearest Neighbor <br>
+[6] Range Search <br>
+[7] Print Tree <br>
 [0] Exit

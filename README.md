@@ -50,7 +50,8 @@ This alternating comparison effectively splits space by hyperplanes.
 
 ### `findMinimumAxisValueFromNode`
 - Finds the minimum node along a given axis, starting from a subtree root.  
-- Recursively compares candidates where the target axis matches the current level.  
+- Recursively compares candidates where the target axis matches the current level.
+- Used in `removeNode` to find a minimum node that will replace the to be removed node. 
 
 **Complexity**:  
 - Time: `O(log n)` average, `O(n)` worst case  
@@ -60,7 +61,7 @@ This alternating comparison effectively splits space by hyperplanes.
 
 ### `removeNode`
 - Locate the target node.  
-- Find the minimum in the relevant dimension from its subtree.  
+- Find the minimum in the relevant dimension from its subtree using `findMinimumAxisValueFromNode`.  
 - Replace the target with that node, then recursively update left/right subtrees.  
 
 **Complexity**:  
@@ -72,7 +73,7 @@ This alternating comparison effectively splits space by hyperplanes.
 ### `nearestNeighbor`
 - Traverses down to the target region, then backtracks.  
 - Updates the nearest point seen so far.  
-- Explores the opposite branch if it might contain a closer point.  
+- Explores the opposite branch if it might contain a closer point, when backtracking.  
 
 **Complexity**:  
 - Time: `O(log n)` average, `O(n)` worst case  
@@ -82,8 +83,8 @@ This alternating comparison effectively splits space by hyperplanes.
 
 ### `rangeSearch`
 - Finds all points inside a bounding box (rectangle in 2D, cube in 3D).  
-- Requires an origin, height, width, and (optional) length.  
-- Checks if each point lies within `[min, max]` for each dimension.  
+- Requires an origin, height, width, and (to be ignored in 2D) length.  
+- Checks if each point lies within the `[min, max]` of the bounding box for each dimension.  
 
 **Complexity**:  
 - Time: `O(n^(1 - 1/k) * m)`, where *m* = number of results  

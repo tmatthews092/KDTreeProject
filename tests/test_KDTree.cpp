@@ -323,6 +323,23 @@ TEST_F(test_KDTree, KDTree_RangeSearch)
     }
 }
 
+TEST_F(test_KDTree, KDTree_3DGetNodeComplex)
+{
+    {
+        vector<vector<double>> points = getComplexPreset3DPoints();
+        KDTree *kdTree = new KDTree(points[0].size());
+        for (auto point : points)
+        {
+            kdTree->setRoot(kdTree->insertNode(point));
+        }
+        ASSERT_TRUE(kdTree->getNode(points[0]) != nullptr);
+        ASSERT_TRUE(kdTree->getNode(points[1]) != nullptr);
+        ASSERT_TRUE(kdTree->getNode(points[3]) != nullptr);
+        ASSERT_TRUE(kdTree->getNode(points[5]) != nullptr);
+        ASSERT_TRUE(kdTree->getNode(vector<double>{100.0,1.0,1.0}) == nullptr);
+    }
+}
+
 TEST_F(test_KDTree, KDTree_3DInsert)
 {
     {

@@ -31,6 +31,7 @@ This alternating comparison effectively splits space by hyperplanes.
 ### `getNode`
 - Recursively traverses the tree, comparing on the dimension of the current level.  
 - Goes left if the point’s value is smaller, right otherwise.  
+- Implemented first since other methods rely on this logic.
 
 **Complexity**:  
 - Time: `O(log n)` average, `O(n)` worst case  
